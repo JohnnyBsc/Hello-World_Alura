@@ -1,3 +1,11 @@
-let NomeUsuario = prompt("Qual é o seu nome?");
+let NomeUsuario = "";
 let Visitante = document.querySelector("#nome-usuario");
-Visitante.textContent = NomeUsuario;
+
+while(NomeUsuario == ""){
+    NomeUsuario = prompt("Qual é o seu nome?");
+}
+
+if(NomeUsuario == null){
+    Visitante.textContent = "usuário desconhecido."
+}
+else{Visitante.textContent = NomeUsuario;}
